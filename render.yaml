@@ -22,11 +22,12 @@ services:
   #---------------------------------#
   #  The Frontend dApp (Storefront) #
   #---------------------------------#
-  - type: static
+  - type: web
     name: dropify-frontend
     # This tells Render to look in the main project folder
     rootDir: ./
     # Commands to build the React app
     buildCommand: "npm install && npm run build"
     # The folder where the final website files are placed
+
     publishPath: "build"
