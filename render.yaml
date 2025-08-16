@@ -1,0 +1,32 @@
+services:
+  #---------------------------------#
+  #  The Backend Server (Factory)   #
+  #---------------------------------#
+  - type: web
+    name: dropify-server
+    runtime: node
+    # This tells Render to look inside your /server folder
+    rootDir: ./server
+    # Commands to build and start the server
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    # Defines the secret keys your server needs
+    envVars:
+      - key: PRIVATE_KEY
+        sync: false # Set this securely in the Render dashboard
+      - key: RPC_URL
+        sync: false # Set this in the Render dashboard
+      - key: DROP_TOKEN_ADDRESS
+        sync: false # Set this in the Render dashboard
+
+  #---------------------------------#
+  #  The Frontend dApp (Storefront) #
+  #---------------------------------#
+  - type: static
+    name: dropify-frontend
+    # This tells Render to look in the main project folder
+    rootDir: ./
+    # Commands to build the React app
+    buildCommand: "npm install && npm run build"
+    # The folder where the final website files are placed
+    publishPath: "build"
