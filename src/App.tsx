@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 // --- Configuration ---
-const DROP_TOKEN_ADDRESS = "YOUR_DEPLOYED_DROP_TOKEN_ADDRESS_HERE"; 
+const DROP_TOKEN_ADDRESS = 0xcc4cd134a11dae5f2d89be3ede86a6675ccb9db6f03476de769260652646341f; 
 const SERVER_URL = "http://localhost:3001"; 
 
 function App() {
