@@ -1,0 +1,10 @@
+{
+  "name": "dropify-smart-contracts",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "dotenv": "^16.4.1",
+    "hardhat": "^2.14.0"
+  }
+}
